@@ -1,5 +1,5 @@
 -- Database: ooshdb
-
+--
 -- DROP DATABASE IF EXISTS ooshdb;
 
 CREATE DATABASE ooshdb
@@ -65,9 +65,14 @@ ORDER BY
     total_orders DESC;
 
 
+--  list of all customers who have placed orders in the last 30 days
+SELECT * 
+FROM customers;
+
+SELECT * 
+FROM orders;
 
 
+USE ooshdb;
 
-
-
-	
+SELECT * FROM shops;
