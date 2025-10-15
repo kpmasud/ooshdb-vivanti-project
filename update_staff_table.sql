@@ -23,7 +23,8 @@ SELECT * FROM staff;
 
 
 ALTER TABLE             staff 
-ADD COLUMN              status TEXT DEFAULT 'active'; 
+ADD COLUMN              status 
+TEXT DEFAULT            'active'; 
 
 -- verify the changes
 
@@ -114,7 +115,29 @@ FROM                    staff
 WHERE                   
 staff_id                = 428;
 
--- End of the code
+SELECT *            
+FROM                    staff;
+
+
+
+SELECT * 
+FROM                   staff
+WHERE
+staff_status                 ='resigned';
+
+-- update staff table with column name status to staff_status
+
+ALTER TABLE             staff
+RENAME COLUMN           status
+TO                     staff_status;
+
+
+-- verify the changes 
+
+SELECT * 
+FROM                    staff; 
+
+
 
 
 

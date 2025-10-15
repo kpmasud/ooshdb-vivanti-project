@@ -79,6 +79,26 @@ ORDER BY
 DESC TABLE orders;
 
 
+--  list of all customers who have placed orders more than 5 times.
+
+SELECT      c.customer_id,
+            c.first_name, 
+            c.last_name, 
+            c.email, 
+COUNT       (o.order_id)        AS order_count
+FROM        customers c
+JOIN        orders o 
+ON          c.customer_id = o.order_id
+
+GROUP BY    c.customer_id, 
+            c.first_name, 
+            c.last_name, 
+            c.email
+HAVING 
+COUNT       (o.order_id) > 5
+ORDER BY    order_count 
+DESC;
+
 
 
 
