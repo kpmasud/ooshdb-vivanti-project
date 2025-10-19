@@ -35,9 +35,7 @@ REFERENCES              delivery_methods (id)
 ON UPDATE               CASCADE
 ON DELETE               SET NULL;
 
--- didn't run the above command because of the error: 
--- ERROR:  there is no unique constraint matching given keys for referenced table "delivery_methods"
--- so we need to check the delivery_methods table structure
+-- didn't run the above command because of the error because it should be delivery_id not id: 
 
 
 -- Check delivery_methods table structure
